@@ -88,7 +88,7 @@ function App() {
     if (key === "2,5,8") return { type: "col", left: "83.3%" };
 
 
-    // Diagonals (rotated horizontal line)
+    // Diagonals
     if (key === "0,4,8") return { type: "diag", rotate: "45deg" };
     if (key === "2,4,6") return { type: "diag", rotate: "-45deg" };
 
@@ -171,7 +171,7 @@ function App() {
         />
 
 
-        {/* ✅ Winning line (fixed for columns) */}
+        {/* Winning line */}
         {lineStyle?.type === "row" && (
           <View
             pointerEvents="none"
@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
   cardDisabled: { opacity: 0.7 },
 
 
-  // ✅ Row line
+  //Row line
   winLineRow: {
     position: "absolute",
     left: "5%",
@@ -270,7 +270,7 @@ const styles = StyleSheet.create({
   },
 
 
-  // ✅ Column line
+  //Column line
   winLineCol: {
     position: "absolute",
     top: "5%",
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
   },
 
 
-  // ✅ Diagonal line
+  //Diagonal line
   winLineDiag: {
     position: "absolute",
     top: "50%",
